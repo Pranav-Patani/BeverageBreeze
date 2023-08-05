@@ -1,0 +1,52 @@
+.section-profile {
+  max-width: 144rem;
+  min-height: 90vh;
+  padding: 5rem 0;
+  text-align: center;
+  background-color: var(--color-primary-dark);
+  &__profile-card {
+    text-align: left;
+    background-color: var(--color-light);
+    border-radius: 1.5rem;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    &__img-container {
+      width: 15rem;
+      height: 15rem;
+      margin: 1rem auto;
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+
+      &__img {
+        height: 100%;
+        transform: translateX(-5.8rem) scale(1.4);
+      }
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      &__info {
+        padding: 0.5rem 0;
+        margin: 0.5rem 0;
+        font-size: 1.6rem;
+        letter-spacing: 0.05rem;
+
+        &__key {
+          color: var(--color-text-light);
+          font-weight: 700;
+        }
+
+        &__value {
+          color: var(--color-text-gray-dark);
+        }
+      }
+      &__btn {
+        margin: 1rem 0;
+      }
+    }
+  }
+}

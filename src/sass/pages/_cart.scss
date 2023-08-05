@@ -1,0 +1,105 @@
+.section-cart {
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 144rem;
+  padding: 5rem 12rem;
+  position: relative;
+  background-color: var(--color-lighter);
+
+  &__empty {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--color-light);
+    min-height: 80vh;
+    padding: 4rem;
+
+    &__heading {
+      margin: 1rem 0;
+      font-size: 2.6rem;
+    }
+    &__sub-heading {
+      margin: 1rem 0 2rem 0;
+      font-size: 1.8rem;
+    }
+
+    &__btn {
+      margin: 1rem;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 5rem;
+
+    &__span {
+      font-weight: 400;
+    }
+  }
+
+  &__prod-and-sum-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  &__products {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-basis: 55%;
+    align-content: flex-start;
+  }
+
+  &__summary {
+    &__heading {
+      color: var(--color-primary);
+      font-size: 1.8rem;
+
+      &__span {
+        font-weight: 400;
+      }
+    }
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.5rem;
+
+      &__container {
+        display: flex;
+        justify-content: space-between;
+
+        &:last-child {
+          margin-top: 0.5rem;
+          padding-top: 0.5rem;
+          border-top: 1px solid var(--color-primary-light);
+          font-weight: 700;
+        }
+      }
+      &__discount {
+        margin-top: 2rem;
+        color: var(--color-primary-dark);
+      }
+    }
+
+    &__btn-container {
+      margin-top: 1rem;
+      text-align: center;
+
+      &__btn {
+        width: 100%;
+        font-weight: 700;
+        color: var(--color-lighter);
+
+        &:hover {
+          transform: translateY(-0.4rem);
+        }
+      }
+    }
+  }
+}

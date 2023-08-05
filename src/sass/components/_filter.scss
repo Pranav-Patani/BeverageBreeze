@@ -1,0 +1,97 @@
+.filter {
+  padding: 4rem 2rem;
+  &__heading {
+    color: var(--color-text-dark);
+    margin-bottom: 2rem;
+  }
+
+  &__all-headings {
+    color: var(--color-text-dark);
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+
+  &__category {
+    margin-bottom: 2rem;
+
+    &__checkbox-container {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--color-text-light);
+      font-weight: 700;
+
+      &__checkbox {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &__price {
+    margin-bottom: 2rem;
+    &__radio-container {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--color-text-light);
+      font-weight: 700;
+
+      &__radio {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &__rating {
+    &__slider-container {
+      &__slider {
+        appearance: inherit;
+        -webkit-appearance: none;
+        width: 10rem;
+        height: 1.3rem;
+        border-radius: 5px;
+        background: var(--color-lighter);
+        outline: none;
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 1.5rem;
+          height: 1.5rem;
+          background: url("./logo.svg");
+          background-repeat: no-repeat;
+          cursor: pointer;
+        }
+
+        &::-moz-range-thumb {
+          width: 1.5rem;
+          height: 1.5rem;
+          background: url("./logo.svg");
+          background-repeat: no-repeat;
+          cursor: pointer;
+        }
+      }
+
+      &__label {
+        display: block;
+        font-size: 1.2rem;
+        color: var(--color-text-light);
+        font-weight: 700;
+        margin-left: 0.2rem;
+      }
+    }
+  }
+
+  &__reset {
+    margin-top: 4rem;
+    &__btn {
+      font-weight: 400;
+      color: var(--color-text-light);
+      background-image: linear-gradient(
+        to bottom right,
+        var(--color-light),
+        var(--color-lighter)
+      );
+      border: 2px solid var(--color-primary);
+    }
+  }
+}

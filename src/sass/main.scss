@@ -9,6 +9,12 @@
 
 //Components
 @import "components/buttons";
+@import "components/bg-video";
+@import "components/loader";
+@import "components/filter";
+@import "components/product-card";
+@import "components/wishlist-card";
+@import "components/cart-card";
 
 //Layouts
 @import "layouts/footer";
@@ -20,4 +26,8 @@
 @import "pages/home";
 @import "pages/notfound";
 @import "pages/products";
+@import "pages/product-detail";
 @import "pages/wishlist";
+@import "pages/login";
+@import "pages/profile";
+@import "pages/checkout";

@@ -1,3 +1,21 @@
+:root {
+  --color-primary: #14b8a6;
+  --color-primary-light: #5eead4;
+  --color-primary-dark: #0f766e;
+
+  --color-text-dark: #042f2e;
+  --color-text-light: #115e59;
+  --color-text-gray-dark: #111827;
+  --color-text-gray: #374151;
+  --color-text-gray-light: #6b7280;
+
+  --color-lighter: #f0fdfa;
+  --color-light: #ccfbf1;
+  --color-light-2: #99f6e4;
+
+  --color-black: #000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,4 +30,8 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; //1rem = 10px | 10px/16px = 62.5%
+}
+
+body {
+  padding: 3rem;
 }

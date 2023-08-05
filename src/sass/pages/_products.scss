@@ -1,0 +1,23 @@
+.section-products {
+  max-width: 144rem;
+  display: flex;
+
+  &__filter {
+    padding: 0;
+    background-image: linear-gradient(
+      to right,
+      var(--color-light-2) 70%,
+      var(--color-lighter)
+    );
+    flex-basis: 17%;
+  }
+  &__products {
+    flex-basis: 83%;
+    background-color: var(--color-lighter);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    padding: 1.5rem;
+  }
+}

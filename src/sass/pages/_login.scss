@@ -1,0 +1,107 @@
+.section-login {
+  max-width: 144rem;
+  background-image: inherit;
+  min-height: 90vh;
+  text-align: center;
+  padding: 10rem 0 5rem 0;
+  background-color: var(--color-primary-dark);
+  &__content {
+    text-align: left;
+    display: inline-block;
+    padding: 2rem 4rem;
+    border-radius: 4rem;
+    background-color: var(--color-lighter);
+    &__heading {
+      color: var(--color-text-light);
+      text-transform: capitalize;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      &__input-container {
+        margin: 1rem 0;
+
+        &__label {
+          display: inline-block;
+          text-transform: capitalize;
+          letter-spacing: 0.1rem;
+          color: var(--color-text-gray);
+          margin-bottom: 0.5rem;
+          margin-right: 1.5rem;
+        }
+
+        &__input {
+          display: inline-block;
+          padding: 0.5rem 1rem;
+          border: none;
+          border-bottom: 1px solid var(--color-primary-dark);
+          transition: all 0.6s;
+
+          &::placeholder {
+            letter-spacing: 0.1rem;
+            color: var(--color-text-gray-light);
+          }
+
+          &:focus {
+            outline: none;
+            border-bottom: 1px solid transparent;
+          }
+
+          &__bottom {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary-dark);
+            transition: all 0.3s;
+          }
+
+          &:focus + &__bottom {
+            width: 100%;
+          }
+          &:invalid + &__bottom {
+            background-color: orangered;
+          }
+        }
+
+        &__password {
+          position: relative;
+
+          & > .section-login__content__form__input-container__label {
+            margin-right: 5rem;
+          }
+        }
+
+        &__icon {
+          position: absolute;
+          bottom: 0.4rem;
+          right: 2rem;
+          font-size: 1.3rem;
+          color: var(--color-text-light);
+        }
+      }
+
+      &__btn-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-around;
+
+        &__btn {
+          margin: 0.8rem 0;
+        }
+
+        &__link {
+          text-decoration: none;
+          font-size: 1.4rem;
+          color: var(--color-text-light);
+          font-weight: 400;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}

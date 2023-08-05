@@ -1,0 +1,77 @@
+.btn-primary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: inherit;
+  padding: 2rem 6rem;
+  border-radius: 50rem;
+  border: none;
+  text-transform: uppercase;
+  color: var(--color-light);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-light),
+    var(--color-primary)
+  );
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+    transform: translateY(-1rem);
+  }
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+    transform: translateY(-0.1rem);
+  }
+}
+
+.btn-secondary {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: inherit;
+  padding: 2rem 6rem;
+  border-radius: 1rem 1rem 0 0;
+  border: none;
+  text-transform: uppercase;
+  color: var(--color-light);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-light),
+    var(--color-primary)
+  );
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+    transform: translateY(-0.5rem);
+  }
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+    transform: translate(0rem);
+  }
+}
+
+.btn-tertiary {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: inherit;
+  padding: 1rem 2rem;
+  border-radius: 1rem 1rem 0 0;
+  border: none;
+  text-transform: uppercase;
+  color: var(--color-light);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-light),
+    var(--color-primary)
+  );
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+    transform: translateY(-0.5rem);
+  }
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+    transform: translate(0rem);
+  }
+}

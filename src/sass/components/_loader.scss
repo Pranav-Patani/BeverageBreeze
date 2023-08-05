@@ -1,0 +1,27 @@
+.section-loader {
+  max-width: 144rem;
+  min-height: 90vh;
+  position: relative;
+  &__loader {
+    @include absCenter;
+    text-align: center;
+    &__icon {
+      font-size: 4.5rem;
+      animation: rotate 1.5s ease-in;
+      animation-iteration-count: infinite;
+      color: var(--color-text-dark);
+    }
+    &__text {
+      font-size: 1.6rem;
+      font-weight: 700;
+      background-image: linear-gradient(
+        to bottom right,
+        var(--color-text-dark),
+        var(--color-text-light)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+}
