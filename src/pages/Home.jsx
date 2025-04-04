@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { useData } from "../contexts/DataContext";
 import { Loader } from "../components/Loader";
-import { BgVideo } from "../components/BgVideo";
 import { TbBottleFilled } from "react-icons/tb";
+import BgImg from "../components/BgImg";
 
+const LazyBgVideo = lazy(() => import("../components/BgVideo"));
 export const Home = () => {
   const { state, dispatch, setLoader, loader } = useData();
   const [categories, setCategories] = useState([]);
@@ -41,10 +42,20 @@ export const Home = () => {
         <Loader />
       ) : (
         <div>
-         
           <div className="section-home">
             <div className="section-home__hero">
-              <BgVideo />
+              <Suspense
+                fallback={
+                  <img
+                    src={<BgImg />}
+                    alt="background"
+                    onLoad={() => console.log("Fallback image loaded")}
+                    style={{ height: 100 + "vh", width: 100 + "vw" }}
+                  />
+                }
+              >
+                <LazyBgVideo />
+              </Suspense>
               <div className="section-home__hero-content">
                 <div className="section-home__hero-content-logo-box">
                   <TbBottleFilled className="section-home__hero-content-logo-box-icon" />
@@ -102,7 +113,6 @@ export const Home = () => {
               </div>
             </div>
           </div>
-       
         </div>
       )}
     </>
