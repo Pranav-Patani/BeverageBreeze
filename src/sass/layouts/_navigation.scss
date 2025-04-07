@@ -17,6 +17,12 @@
       &-icon {
         font-size: 4.5rem;
         color: var(--color-primary-dark);
+        @media only screen and (max-width: 900px) {
+          font-size: 4.3rem;
+        }
+        @media only screen and (max-width: 600px) {
+          font-size: 4rem;
+        }
       }
       &-text {
         font-size: 1.5rem;
@@ -30,6 +36,14 @@
         -webkit-background-clip: text;
         color: transparent;
 
+        @media only screen and (max-width: 900px) {
+          font-size: 1.4rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+          font-size: 1.2rem;
+        }
+
         &--top {
           display: block;
         }
@@ -42,6 +56,14 @@
 
   &__search-bar-container {
     flex-basis: 40%;
+
+    @media only screen and (max-width: 900px) {
+      flex-basis: 50%;
+    }
+
+    @media only screen and (max-width: 900px) {
+      flex-basis: 60%;
+    }
 
     &-bar {
       padding: 1rem 2rem;
@@ -70,9 +92,31 @@
 
   &__nav-container {
     display: flex;
-    
+    transition: 0.2s all;
     justify-content: space-around;
     flex-basis: 27%;
+    transition: 0.2s all;
+
+    @media only screen and (max-width: 900px) {
+      visibility: hidden;
+      transform: translateX(90%);
+      flex-direction: column;
+      position: fixed;
+      background-color: inherit;
+      height: 100%;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      width: 20rem;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: 1rem 2rem 2rem #000;
+      &--active {
+        visibility: visible;
+        transform: translateX(0);
+      }
+    }
 
     &-item {
       font-size: 2.2rem;
@@ -83,12 +127,12 @@
 
       &__products {
         font-size: 1.4rem;
-        letter-spacing: .1rem;
+        letter-spacing: 0.1rem;
         flex-grow: 2;
 
         &:hover {
           letter-spacing: 0.1rem;
-          transform: scale(1.1) skew(-4deg, -2deg)
+          transform: scale(1.1) skew(-4deg, -2deg);
         }
       }
 
@@ -119,6 +163,16 @@
         padding: 0.1rem 0.6rem;
         border-radius: 100rem;
       }
+    }
+  }
+  &__hamburger {
+    width: 2rem;
+    height: 2rem;
+    display: none;
+    z-index: 4;
+
+    @media only screen and (max-width: 900px) {
+      display: block;
     }
   }
 }

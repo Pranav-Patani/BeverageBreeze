@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useData } from "../contexts/DataContext";
 import { useAuth } from "../contexts/AuthContext";
-import { FaUser, FaHeart, FaCartShopping } from "react-icons/fa6";
+import { FaUser, FaHeart, FaCartShopping, FaBars } from "react-icons/fa6";
 import { TbBottleFilled } from "react-icons/tb";
 
 export const Navigation = () => {
@@ -18,6 +18,11 @@ export const Navigation = () => {
       : dispatch({ type: "SET_INPUT", payload: event.target.value });
     navigate("/products");
   };
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+
+  function handleHamburgerToggle() {
+    setIsHamburgerOpen((curState) => !curState);
+  }
 
   return (
     <>
@@ -41,26 +46,53 @@ export const Navigation = () => {
           <span className="header__search-bar-container-bottom"></span>
         </div>
 
-        <nav className="header__nav-container">
-        <NavLink className="header__nav-container-item" to="/products">
-            <h1 className="header__nav-container-item__products heading-primary">Beverages</h1>
+        <nav
+          className={`header__nav-container ${
+            isHamburgerOpen && "header__nav-container--active"
+          }`}
+        >
+          <NavLink
+            onClick={isHamburgerOpen && handleHamburgerToggle}
+            className="header__nav-container-item"
+            to="/products"
+          >
+            <h1 className="header__nav-container-item__products heading-primary">
+              Beverages
+            </h1>
           </NavLink>
-          <NavLink className="header__nav-container-item" to="/profile">
+          <NavLink
+            onClick={isHamburgerOpen && handleHamburgerToggle}
+            className="header__nav-container-item"
+            to="/profile"
+          >
             <FaUser />
           </NavLink>
-          <NavLink className="header__nav-container-item" to="/wishlist">
+          <NavLink
+            onClick={isHamburgerOpen && handleHamburgerToggle}
+            className="header__nav-container-item"
+            to="/wishlist"
+          >
             <FaHeart />
             {token && (
-              <div className="header__nav-container-item__counter">{wishlist.length}</div>
+              <div className="header__nav-container-item__counter">
+                {wishlist.length}
+              </div>
             )}
           </NavLink>
-          <NavLink className="header__nav-container-item" to="/cart">
+          <NavLink
+            onClick={isHamburgerOpen && handleHamburgerToggle}
+            className="header__nav-container-item"
+            to="/cart"
+          >
             <FaCartShopping />
             {token && (
-              <div className="header__nav-container-item__counter">{cart.length}</div>
+              <div className="header__nav-container-item__counter">
+                {cart.length}
+              </div>
             )}
           </NavLink>
         </nav>
+        <FaBars className="header__hamburger" onClick={handleHamburgerToggle} />
       </div>
     </>
   );
