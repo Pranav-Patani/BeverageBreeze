@@ -108,12 +108,12 @@ export const Login = () => {
               >
                 Guest Login
               </button>
-              <Link
+              {/* <Link
                 to="/signup"
                 className="section-login__content__form__btn-container__link"
               >
                 Create new account
-              </Link>
+              </Link> */}
             </div>
           </form>
         </div>
