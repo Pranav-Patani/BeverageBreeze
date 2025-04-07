@@ -1,5 +1,11 @@
 .checkout__summary {
   background-color: var(--color-lighter);
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   &__heading {
     color: var(--color-primary);
     font-size: 1.8rem;
