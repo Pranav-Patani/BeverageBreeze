@@ -23,6 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "prebuild": "sass ./src/sass/main.scss ./src/Styles.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "compile:sass": "sass ./src/sass/main.scss ./src/Styles.css -w"
