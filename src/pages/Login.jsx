@@ -24,7 +24,7 @@ export const Login = () => {
       email: "guestuser@gmail.com",
       password: "guestuser",
     }));
-    userLoginFunc(loginData.email, loginData.password);
+    userLoginFunc("guestuser@gmail.com", "guestuser");
   };
 
   const loginHandler = () => {
@@ -33,7 +33,6 @@ export const Login = () => {
 
   return (
     <>
-   
       <div className="section-login">
         <div className="section-login__content">
           <h2 className="section-login__content__heading heading-secondary">
@@ -119,7 +118,6 @@ export const Login = () => {
           </form>
         </div>
       </div>
-     
     </>
   );
 };
