@@ -99,7 +99,10 @@ export const Home = () => {
                       <p className="section-home__categories-card-container__card__text-container-para">
                         {description}
                       </p>
-                      <Link to="/products">
+                      <Link
+                        to="/products"
+                        className="section-home__categories-card-container__card__text-container-btn-link"
+                      >
                         <button
                           onClick={() => handleCategoryWiseShop(categoryName)}
                           className="section-home__categories-card-container__card__text-container-btn btn-secondary"

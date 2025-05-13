@@ -27,72 +27,79 @@ export const Navigation = () => {
   return (
     <>
       <div className="header">
-        <nav className="header__logo-box">
-          <NavLink className="header__logo-box-nav" to="/">
-            <TbBottleFilled className="header__logo-box-nav-icon" />
-            <p className="header__logo-box-nav-text">
-              <span className="header__logo-box-nav-text--top">Beverage</span>
-              <span className="header__logo-box-nav-text--bottom">Breeze</span>
-            </p>
-          </NavLink>
-        </nav>
-        <div className="header__search-bar-container">
-          <input
-            className="header__search-bar-container-bar"
-            type="text"
-            placeholder="Search for Beverages"
-            onChange={handlesearch}
-          />
-          <span className="header__search-bar-container-bottom"></span>
-        </div>
+        <div className="header__wrapper">
+          <nav className="header__logo-box">
+            <NavLink className="header__logo-box-nav" to="/">
+              <TbBottleFilled className="header__logo-box-nav-icon" />
+              <p className="header__logo-box-nav-text">
+                <span className="header__logo-box-nav-text--top">Beverage</span>
+                <span className="header__logo-box-nav-text--bottom">
+                  Breeze
+                </span>
+              </p>
+            </NavLink>
+          </nav>
+          <div className="header__search-bar-container">
+            <input
+              className="header__search-bar-container-bar"
+              type="text"
+              placeholder="Search for Beverages"
+              onChange={handlesearch}
+            />
+            <span className="header__search-bar-container-bottom"></span>
+          </div>
 
-        <nav
-          className={`header__nav-container ${
-            isHamburgerOpen && "header__nav-container--active"
-          }`}
-        >
-          <NavLink
-            onClick={isHamburgerOpen && handleHamburgerToggle}
-            className="header__nav-container-item"
-            to="/products"
+          <nav
+            className={`header__nav-container ${
+              isHamburgerOpen && "header__nav-container--active"
+            }`}
           >
-            <h1 className="header__nav-container-item__products heading-primary">
-              Beverages
-            </h1>
-          </NavLink>
-          <NavLink
-            onClick={isHamburgerOpen && handleHamburgerToggle}
-            className="header__nav-container-item"
-            to="/profile"
-          >
-            <FaUser />
-          </NavLink>
-          <NavLink
-            onClick={isHamburgerOpen && handleHamburgerToggle}
-            className="header__nav-container-item"
-            to="/wishlist"
-          >
-            <FaHeart />
-            {token && (
-              <div className="header__nav-container-item__counter">
-                {wishlist.length}
-              </div>
-            )}
-          </NavLink>
-          <NavLink
-            onClick={isHamburgerOpen && handleHamburgerToggle}
-            className="header__nav-container-item"
-            to="/cart"
-          >
-            <FaCartShopping />
-            {token && (
-              <div className="header__nav-container-item__counter">
-                {cart.length}
-              </div>
-            )}
-          </NavLink>
-        </nav>
-        <FaBars className="header__hamburger" onClick={handleHamburgerToggle} />
+            <NavLink
+              onClick={isHamburgerOpen && handleHamburgerToggle}
+              className="header__nav-container-item"
+              to="/products"
+            >
+              <h1 className="header__nav-container-item__products heading-primary">
+                Beverages
+              </h1>
+            </NavLink>
+            <NavLink
+              onClick={isHamburgerOpen && handleHamburgerToggle}
+              className="header__nav-container-item"
+              to="/profile"
+            >
+              <FaUser />
+            </NavLink>
+            <NavLink
+              onClick={isHamburgerOpen && handleHamburgerToggle}
+              className="header__nav-container-item"
+              to="/wishlist"
+            >
+              <FaHeart />
+              {token && (
+                <div className="header__nav-container-item__counter">
+                  {wishlist.length}
+                </div>
+              )}
+            </NavLink>
+            <NavLink
+              onClick={isHamburgerOpen && handleHamburgerToggle}
+              className="header__nav-container-item"
+              to="/cart"
+            >
+              <FaCartShopping />
+              {token && (
+                <div className="header__nav-container-item__counter">
+                  {cart.length}
+                </div>
+              )}
+            </NavLink>
+          </nav>
+          <FaBars
+            className="header__hamburger"
+            onClick={handleHamburgerToggle}
+          />
+        </div>
       </div>
     </>
   );

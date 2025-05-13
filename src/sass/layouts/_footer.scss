@@ -1,4 +1,10 @@
+.footer__wrapper {
+  @include wrapper(vertical);
+  align-items: center;
+}
+
 .footer {
+  width: 100%;
   background-color: var(--color-text-dark);
   padding: 4rem 0 2rem 0;
   display: flex;
@@ -56,5 +62,6 @@
     letter-spacing: 0.1rem;
     color: var(--color-primary);
     font-weight: 700;
+    text-align: center;
   }
 }
