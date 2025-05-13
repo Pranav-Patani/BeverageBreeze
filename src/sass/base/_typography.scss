@@ -2,14 +2,14 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  background-image: linear-gradient(
-    to bottom,
-    var(--color-primary),
-    var(--color-primary-dark)
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   var(--color-light),
+  //   var(--color-lighter)
+  // );
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // min-height: 100vh;
 }
 
 .heading-primary {

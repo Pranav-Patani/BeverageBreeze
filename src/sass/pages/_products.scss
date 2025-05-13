@@ -1,14 +1,11 @@
+.section-products__wrapper {
+  @include wrapper(horizontal);
+}
 .section-products {
-  max-width: 144rem;
   display: flex;
 
   &__filter {
     padding: 0;
-    background-image: linear-gradient(
-      to right,
-      var(--color-light-2) 70%,
-      var(--color-lighter)
-    );
     flex-basis: 17%;
   }
   &__products {

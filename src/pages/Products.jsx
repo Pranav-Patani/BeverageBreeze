@@ -43,18 +43,18 @@ export const Products = () => {
         <Loader />
       ) : (
         <div>
-       
           <div className="section-products">
-            <div className="section-products__filter">
-              <Filter />
-            </div>
-            <div className="section-products__products">
-              {searchData?.map((item) => (
-                <ProductList key={item.id} item={item} />
-              ))}
+            <div className="section-products__wrapper">
+              <div className="section-products__filter">
+                <Filter />
+              </div>
+              <div className="section-products__products">
+                {searchData?.map((item) => (
+                  <ProductList key={item.id} item={item} />
+                ))}
+              </div>
             </div>
           </div>
-     
         </div>
       )}
     </>

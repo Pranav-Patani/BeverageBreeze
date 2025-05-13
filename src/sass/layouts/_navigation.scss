@@ -1,3 +1,8 @@
+.header__wrapper {
+  @include wrapper(horizontal);
+  align-items: center;
+}
+
 .header {
   width: 100%;
   display: flex;
@@ -5,6 +10,7 @@
   justify-content: space-around;
   align-items: center;
   height: 10rem;
+  padding: 0 4rem;
 
   &__logo-box {
     line-height: 1.1;
