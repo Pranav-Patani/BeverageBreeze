@@ -3,11 +3,14 @@
   border-radius: 5px;
   overflow: hidden;
   background-color: var(--color-lighter);
-  margin: 2em 1.2rem;
-
   box-shadow: 1rem 1.5rem 2.5rem rgba(#111827, 0.2);
   transition: all 0.25s;
   backface-visibility: hidden;
+
+  @include respond(phone) {
+    max-width: 18rem;
+  }
+
   &:hover {
     transform: scale(1.05);
   }
@@ -15,6 +18,9 @@
   &__img-container {
     height: 30rem;
     width: 23rem;
+    @include respond(phone) {
+      width: 18rem;
+    }
     &__img {
       height: 100%;
       width: 100%;

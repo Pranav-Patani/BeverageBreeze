@@ -1,20 +1,42 @@
 .section-products__wrapper {
   @include wrapper(horizontal);
+  @include respond(tab-port) {
+    @include wrapper(vertical);
+  }
 }
 .section-products {
   display: flex;
+  position: relative;
 
   &__filter {
     padding: 0;
-    flex-basis: 17%;
+    flex: 0 1 17%;
   }
   &__products {
-    flex-basis: 83%;
+    flex: 0 0 83%;
     background-color: var(--color-lighter);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: flex-start;
+    justify-content: space-around;
     padding: 1.5rem;
+    gap: 2rem;
+    @include respond(phone) {
+      gap: 1rem;
+      padding: 0.8rem;
+    }
+  }
+
+  &__button {
+    z-index: 100;
+    flex-basis: 0;
+    display: none;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    @include respond(tab-port) {
+      display: block;
+    }
   }
 }
