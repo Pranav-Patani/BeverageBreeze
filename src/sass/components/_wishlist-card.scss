@@ -6,7 +6,12 @@
   box-shadow: 1rem 1.5rem 2.5rem rgba(#111827, 0.2);
   transition: all 0.25s;
   backface-visibility: hidden;
-  margin-bottom: 5rem;;
+  margin-bottom: 2rem;
+
+  @include respond(phone) {
+    max-width: 18rem;
+  }
+
   &:hover {
     transform: scale(1.05);
   }
@@ -14,6 +19,11 @@
   &__img-container {
     height: 30rem;
     width: 30rem;
+
+    @include respond(phone) {
+      width: 18rem;
+    }
+
     &__img {
       height: 100%;
       width: 100%;
@@ -48,7 +58,6 @@
       font-size: 1.8rem;
       letter-spacing: 0;
       color: var(--color-text-gray-dark);
-
 
       &__org {
         text-decoration: line-through;
