@@ -1,6 +1,7 @@
 .footer__wrapper {
   @include wrapper(vertical);
   align-items: center;
+  gap: 4rem;
 }
 
 .footer {

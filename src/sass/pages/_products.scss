@@ -2,6 +2,7 @@
   @include wrapper(horizontal);
   @include respond(tab-port) {
     @include wrapper(vertical);
+    gap: 1rem;
   }
 }
 .section-products {
