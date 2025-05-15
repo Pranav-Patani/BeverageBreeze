@@ -1,16 +1,32 @@
+.section-login__wrapper {
+  @include wrapper(vertical);
+  align-items: center;
+}
+
 .section-login {
-  max-width: 144rem;
   background-image: inherit;
   min-height: 90vh;
-  text-align: center;
-  padding: 10rem 0 5rem 0;
-  background-color: var(--color-primary-dark);
+  padding: 4rem;
+  background-color: var(--color-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include respond(tab-land) {
+    padding: 2rem;
+  }
+  @include respond(phone) {
+    padding: 0.8rem;
+  }
+
   &__content {
     text-align: left;
     display: inline-block;
     padding: 2rem 4rem;
     border-radius: 4rem;
     background-color: var(--color-lighter);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
     &__heading {
       color: var(--color-text-light);
       text-transform: capitalize;

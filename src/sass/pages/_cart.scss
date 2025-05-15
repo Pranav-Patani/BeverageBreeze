@@ -8,16 +8,16 @@
   min-height: 90vh;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 5rem 12rem;
+  padding: 4rem;
   position: relative;
   background-color: var(--color-lighter);
 
   @include respond(tab-land) {
-    padding: 5rem 3rem;
+    padding: 2rem;
   }
 
   @include respond(phone) {
-    padding: 5rem 1rem;
+    padding: 0.8rem;
   }
 
   &__empty {

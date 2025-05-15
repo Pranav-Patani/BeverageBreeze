@@ -12,10 +12,17 @@
   height: 10rem;
   padding: 0 4rem;
 
+  @include respond(tab-land) {
+    padding: 2rem;
+  }
+
+  @include respond(phone) {
+    padding: 0.8rem;
+  }
+
   &__logo-box {
     line-height: 1.1;
     text-align: center;
-    padding: 0.5rem;
 
     &-nav {
       text-decoration: none;
