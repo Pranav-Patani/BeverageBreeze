@@ -4,10 +4,15 @@
   border-radius: 5px;
   overflow: hidden;
   background-color: var(--color-lighter);
-  box-shadow: 1rem 1.5rem 2.5rem rgba(#111827, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   transition: all 0.25s;
   backface-visibility: hidden;
   margin-bottom: 4rem;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+
   &:hover {
     transform: scale(1.05);
   }
@@ -15,6 +20,11 @@
   &__img-container {
     height: 22rem;
     width: 22rem;
+
+    @include respond(phone) {
+      width: 100%;
+    }
+
     &__img {
       height: 100%;
       width: 100%;

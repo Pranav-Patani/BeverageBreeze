@@ -1,5 +1,8 @@
+.section-cart__wrapper {
+  @include wrapper(vertical);
+}
+
 .section-cart {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   min-height: 90vh;
@@ -9,9 +12,15 @@
   position: relative;
   background-color: var(--color-lighter);
 
+  @include respond(tab-land) {
+    padding: 5rem 3rem;
+  }
+
+  @include respond(phone) {
+    padding: 5rem 1rem;
+  }
+
   &__empty {
-    margin: 0 auto;
-    max-width: 144rem;
     display: inline-flex;
     flex-direction: column;
     text-align: center;
@@ -47,15 +56,34 @@
     justify-content: space-between;
     padding: 0 1rem;
     gap: 2rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
   }
 
   &__products {
     display: inline-flex;
     flex-wrap: wrap;
     width: 55%;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 
   &__summary {
+    position: sticky;
+    top: 0;
+    padding: 2rem;
+    height: fit-content;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    @include respond(tab-port) {
+      position: relative;
+      margin: 0 auto;
+    }
+
     &__heading {
       color: var(--color-primary);
       font-size: 1.8rem;
