@@ -8,9 +8,17 @@
 .section-products {
   display: flex;
   position: relative;
+  padding: 4rem;
+
+  @include respond(tab-land) {
+    padding: 2rem;
+  }
+
+  @include respond(phone) {
+    padding: 0.8rem;
+  }
 
   &__filter {
-    padding: 0;
     flex: 0 1 17%;
   }
   &__products {
@@ -19,11 +27,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 1.5rem;
-    gap: 2rem;
+    gap: 3rem;
+
+    @include respond(tab-port) {
+      gap: 2rem;
+    }
+
     @include respond(phone) {
       gap: 1rem;
-      padding: 0.8rem;
     }
   }
 
