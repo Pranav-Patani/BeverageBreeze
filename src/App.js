@@ -16,10 +16,12 @@ import { Profile } from "./pages/Profile";
 import { Checkout } from "./pages/Checkout";
 
 import "react-toastify/dist/ReactToastify.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div className="app">
+      <ScrollToTop />
       <Navigation />
       <ToastContainer
         limit="2"
